@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>เพิ่มสินค้า | Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<header class="bg-[#00417F] text-white py-6 shadow-md mb-10">
+  <div class="max-w-7xl mx-auto px-4 flex items-center">
+    <img src="CSMJU_logo.png" alt="CSMJU" class="h-12 w-auto mr-4">
+    <h1 class="text-2xl font-bold">ระบบเพิ่มสินค้า - ร้านค้าของที่ระลึก 30 ปี สาขาวิทยาการคอมพิวเตอร์</h1>
+  </div>
+</header>
+
+
+<h1 class="text-center text-2xl font-bold text-blue-700 my-8">เพิ่มรายการสินค้า</h1>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+
+
+  <!-- เสื้อ -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">เสื้อ</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>สี:</label>
+        <div class="space-x-4">
+          <label><input type="radio" name="shirt_color" class="mr-1">ดำ</label>
+          <label><input type="radio" name="shirt_color" class="mr-1">ขาว</label>
+          <label><input type="radio" name="shirt_color" class="mr-1">เทา</label>
+          <label><input type="radio" name="shirt_color" class="mr-1">น้ำเงิน</label>
+        </div>
+      </div>
+      <div>
+        <label>ขนาด:</label>
+        <select name="shirt_size" class="border border-gray-300 rounded px-2 py-1 ml-2">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="shirt_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="shirt_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="shirt_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+  <!-- กระเป๋า -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">กระเป๋า</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>สี:</label>
+        <label class="ml-4"><input type="radio" name="bag_color" class="mr-1">ดำ</label>
+        <label class="ml-4"><input type="radio" name="bag_color" class="mr-1">ขาว</label>
+      </div>
+      <div>
+        <label>รายละเอียด:</label>
+        <input type="text" name="bag_detail" class="border border-gray-300 rounded px-2 py-1 ml-2 w-60">
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="bag_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="bag_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="bag_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+  <!-- แก้ว -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">แก้ว</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>ลายพิมพ์:</label>
+        <label class="ml-4"><input type="radio" name="mug_design" class="mr-1">โลโก้ที่นศ.ออกแบบ</label>
+        <label class="ml-4"><input type="radio" name="mug_design" class="mr-1">รูปที่ระลึกครบรอบ 30 ปี</label>
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="mug_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="mug_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="mug_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+  <!-- หมวก -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">หมวก</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>สี:</label>
+        <label class="ml-4"><input type="radio" name="hat_color" class="mr-1">ดำ</label>
+        <label class="ml-4"><input type="radio" name="hat_color" class="mr-1">น้ำเงิน</label>
+      </div>
+      <div>
+        <label>ขนาด:</label>
+        <select name="hat_size" class="border border-gray-300 rounded px-2 py-1 ml-2">
+          <option>ฟรีไซส์</option>
+          <option>S</option>
+          <option>M</option>
+        </select>
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="hat_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="hat_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="hat_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+  <!-- ร่ม -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">ร่ม</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>สี:</label>
+        <label class="ml-4"><input type="radio" name="umbrella_color" class="mr-1">ดำ</label>
+        <label class="ml-4"><input type="radio" name="umbrella_color" class="mr-1">ขาว</label>
+        <label class="ml-4"><input type="radio" name="umbrella_color" class="mr-1">น้ำเงิน</label>
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="umbrella_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="umbrella_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="umbrella_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+  <!-- เข็มกลัด -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">เข็มกลัด</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>ลาย:</label>
+        <label class="ml-4"><input type="radio" name="pin_design" class="mr-1">ตราสัญลักษณ์</label>
+        <label class="ml-4"><input type="radio" name="pin_design" class="mr-1">ตัวอักษร</label>
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="pin_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="pin_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="pin_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+  <!-- สมุด -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">สมุด</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>ขนาด:</label>
+        <select name="notebook_size" class="border border-gray-300 rounded px-2 py-1 ml-2">
+          <option>A5</option>
+          <option>B5</option>
+        </select>
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="notebook_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="notebook_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="notebook_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+  <!-- ปากกา -->
+  <fieldset class="bg-white border-2 border-blue-600 rounded-lg p-6 shadow min-h-[440px] w-full max-w-md mx-auto">
+    <legend class="font-bold text-blue-700 text-lg px-2">ปากกา</legend>
+    <form class="mt-4 space-y-4">
+      <div>
+        <label>สีหมึก:</label>
+        <label class="ml-4"><input type="radio" name="pen_ink_color" class="mr-1">ดำ</label>
+        <label class="ml-4"><input type="radio" name="pen_ink_color" class="mr-1">น้ำเงิน</label>
+        <label class="ml-4"><input type="radio" name="pen_ink_color" class="mr-1">แดง</label>
+      </div>
+      <div>
+        <label>จำนวน:</label>
+        <input type="number" name="pen_number" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>ราคา:</label>
+        <input type="number" name="pen_price" class="border border-gray-300 rounded px-2 py-1 ml-2 w-24">
+      </div>
+      <div>
+        <label>รูปภาพ:</label>
+        <input type="file" name="pen_image" class="ml-2">
+      </div>
+    </form>
+  </fieldset>
+
+</div>
+
+<!-- ปุ่ม Submit -->
+<div class="text-center mt-12">
+  <input type="submit" value="แก้ไขข้อมูลและเพิ่มสต็อกสินค้า"
+    class="bg-blue-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-900 cursor-pointer">
+</div>
+
+<footer class="bg-blue-900 text-white text-center py-4 mt-10 w-full shadow-md">
+  <p>&copy; 2025 คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ | ร้านของที่ระลึก 30 ปี</p>
+</footer>
+</body>
+
+</html>
